@@ -1,0 +1,40 @@
+## Make VM Ready With Latest Package
+dnf -y update openssh-server openssh-clients
+systemctl restart sshd
+systemctl status sshd
+
+[root@ns-oel-ai My_Learning]# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:Y65CU/66KxrnS+1nTnX8OvU3P+gZPW8UtdcVzvT7G/0 root@ns-oel-ai
+The key's randomart image is:
++---[RSA 3072]----+
+|               o.|
+|              + +|
+|               o*|
+|      .    .   o+|
+|     o  S . o  .o|
+|    o..o o . .o +|
+|  ..o...o    oo*o|
+|   =o. o+   .oooX|
+|  ..o+*B.   o+ oE|
++----[SHA256]-----+
+
+Copy ~/.ssh/id_rsa.pub file 
+
+Open Navigation Menu -> Setting -> SSH and GPG Keys --> New SSH Key -> Past id_rsa.pub file -> Add SSH Key 
+
+cd /root/My_Learning
+mkdir Devops ## Same as github Repo
+cd /root/My_Learning/Devops
+
+git init 
+git remote add origin git@github.com:nareshsajwani/Devops.git
+git remote -v 
+git pull origin main		## main is the branch in github page
+
