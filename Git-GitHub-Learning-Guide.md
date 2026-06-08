@@ -15,8 +15,6 @@ This guide is designed for beginners to understand Git and GitHub concepts step-
 - Data integrity (uses cryptographic hashes)
 - Branching and merging
 
-![Git Logo](https://git-scm.com/images/logos/2color-lightbg@2x.png)
-
 *Visualization: Think of Git as a timeline of your project's changes.*
 
 ## 2. What is GitHub?
