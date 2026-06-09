@@ -111,13 +111,12 @@ Useful before merging a feature branch.
 
 ## 13. How to check history of a file?
 
-```bash
+```
 git log --oneline filename.txt
 git log -p filename.txt        # Shows changes
 
-Your Practiced Commands with Explanation
-Prepare Folder
-Bash
+#Practiced Commands with Explanation
+
 mkdir Naresh
 cd Naresh
 touch first.txt second.txt
@@ -126,20 +125,25 @@ echo "second" > second.txt
 Initialize Git
 Bashgit init
 git status
-Add Files
-Bashgit add first.txt
+
+
+#Add Files
+git add first.txt
 git add second.txt
 git status
-Set User Info (Important before commit)
-Bashgit config --global user.email "naresh.sajwani1612@gmail.com"
+
+#Set User Info (Important before commit)
+git config --global user.email "naresh.sajwani1612@gmail.com"
 git config --global user.name "Naresh Sajwani"
 git config --list
-First Commit
-Bashgit commit -m "Commit-1"
+
+#First Commit
+git commit -m "Commit-1"
 git status
 git log --oneline --graph --all
-Create & Work on Branches
-Bashgit branch
+
+#Create & Work on Branches
+git branch
 echo `date` >> first.txt
 git add first.txt
 git commit -m "Commit-2"
@@ -150,7 +154,8 @@ git checkout -b NewBranch
 echo "third" > third.txt
 git add third.txt
 git commit -m "Commit-3"
-Merging
+
+#Merging
 Bashgit checkout master
 git merge feature/tablespace-monitoring
 git log --oneline --graph --all
@@ -161,7 +166,7 @@ git log --oneline --graph --all
 Understanding Clone, Fetch & Origin (Very Important)
 git clone
 
-Downloads the entire repository.
+##Downloads the entire repository.
 Creates only one local branch (master/main).
 All other branches exist on the server.
 
